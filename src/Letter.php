@@ -45,6 +45,10 @@ class Letter
     {
         return $this->body;
     }
+    public function getId()
+    {
+        return $this->body->id;
+    }
 
     /**
      * @param mixed $body

@@ -25,7 +25,7 @@ class ImapBody
      * Meta data fethed from IMAP server for this email
      * @var BodyStructure
      */
-    protected $structure;
+    public $structure;
 
     /**
      * Socket connection Wrapper
@@ -37,7 +37,7 @@ class ImapBody
      * UID of message
      * @var mixed
      */
-    protected $id;
+    public $id;
 
     /**
      * ImapBody constructor.
@@ -57,6 +57,15 @@ class ImapBody
     public function getHTML()
     {
         $part = $this->findPartByMimeType('HTML');
+        return $part->getContentDecoded();
+    }
+    
+    /**
+     * @return string
+     */
+    public function getPLAIN()
+    {
+        $part = $this->findPartByMimeType('PLAIN');
         return $part->getContentDecoded();
     }
 

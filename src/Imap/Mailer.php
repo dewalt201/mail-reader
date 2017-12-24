@@ -63,6 +63,12 @@ class Mailer implements MailerReaderInterface
         }
         return [];
     }
+    
+    final public function getConnect()
+    {
+        $connect = $this->getConnection();
+        return $connect;
+    }
 
     /**
      * @param int $letterNum

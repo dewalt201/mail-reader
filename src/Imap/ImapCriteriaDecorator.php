@@ -19,7 +19,7 @@ use Mails\Search\SearchCriteria;
 class ImapCriteriaDecorator implements CriteriaInterface
 {
 
-    const DEFAULT_CRITERIA = 'ALL';
+    const DEFAULT_CRITERIA = 'UNSEEN';
     /**
      * @var SearchCriteria
      */

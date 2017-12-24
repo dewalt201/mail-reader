@@ -28,7 +28,7 @@ final class Connection
             $config->serialize(),
             $config->getUser(),
             $config->getPass(),
-            OP_DEBUG | OP_READONLY
+            OP_DEBUG
         );
         if (!is_resource($this->descriptor)) {
             throw new \Exception('Can`t connect to mail server. Please recheck your credentials');
